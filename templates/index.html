@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    这里是首页网站<br>
+    这个网站的管理员是{{ admin }}<br>
+    电话:{{ info.phone }}<br>
+    电子邮箱:{{ info.Email }}<br>
+    {% if info.phone != '18810927950' %}
+        <p>手机号信息不正确！</p>
+        {%  elif '@' not in info.Email %}
+            <p>邮件格式不正确！</p>
+    {% endif %}
+</body>
+</html>

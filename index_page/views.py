@@ -1,7 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 # Create your views here.
 
-def index_page(request):
-    return HttpResponse("首页！")
+
+def index(request):
+    context = {
+        'admin': 'liangzhuang',
+        'info': {'phone':'18810927950',
+                 'Email':'liangzhuang#weilaicheng.com'
+        }
+    }
+    return render(request,'index.html',context=context)
