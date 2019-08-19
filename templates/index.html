@@ -9,16 +9,21 @@
     <br>
     {% if username != None %}
         <h1>{{ username }},欢迎您!</h1>
+        <a href=" {%  url 'book:index' %}?username={{ username }}">图书首页</a>
+        <a href=" {%  url 'cms:index' %}?username={{ username }}">前端首页</a>
+        <a href=" {%  url 'front:index' %}?username={{ username }}">后台首页</a>
+        <a href="{% url 'shouye:index' %}?username={{ username }}">返回首页</a>
     {% else %}
          <h1>游客,欢迎您!</h1>
          <a href=" {%  url 'book:index' %}">图书首页</a>
          <a href=" {%  url 'cms:index' %}">前端首页</a>
          <a href=" {%  url 'front:index' %}">后台首页</a>
+         <a href="{% url 'shouye:index' %}">返回首页</a>
     {% endif %}
+
     <br>
 </header>
     {% block content %}
-        这里是独特页面
     {% endblock %}
 <footer>
     <br>

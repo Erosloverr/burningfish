@@ -1,6 +1,23 @@
 {% extends 'index.html' %}
 
 {% block content %}
-    <p>图书首页</p>
-    <a href="{% url 'shouye:index' %}">返回首页</a>
+    <a href="{% url 'book:add_book' %}">新增图书</a>
+    <table>
+        <tbody>
+            <tr>
+                <th>序号</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>操作</th>
+            </tr>
+            {% for book in book_data %}
+                <tr>
+                    <th>{{ book.0 }}</th>
+                    <th>{{ book.1 }}</th>
+                    <th>{{ book.2 }}</th>
+                    <th><a href=" {% url 'book:del_book' book_id=book.0  %}">删除</a></th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
