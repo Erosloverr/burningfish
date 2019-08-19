@@ -9,10 +9,6 @@
     这个网站的管理员是{{ admin }}<br>
     电话:{{ info.phone }}<br>
     电子邮箱:{{ info.Email }}<br>
-    {% if info.phone != '18810927950' %}
-        <p>手机号信息不正确！</p>
-        {%  elif '@' not in info.Email %}
-            <p>邮件格式不正确！</p>
-    {% endif %}
+    <a href="{% url 'book:index' %}">图书详情</a>
 </body>
 </html>
