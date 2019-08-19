@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'wiki.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lhrdb',
+        'USER': 'root',
+        "PASSWORD": 'passwd',
+        "HOST": '39.96.176.130',
+        'PORT': '3306'
     }
 }
 

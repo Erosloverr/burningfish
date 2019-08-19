@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect,reverse
+from django.db import connection
+import pymysql
 
 
 def index(request):
@@ -14,3 +16,5 @@ def index(request):
 
 def login(request):
     return HttpResponse("front_login_page!")
+
+

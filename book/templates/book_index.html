@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>book</title>
-</head>
-<body>
-<p>图书首页</p>
-<a href="{% url 'shouye:index' %}">返回首页</a>
-</body>
-</html>
+{% extends 'index.html' %}
+
+{% block content %}
+    <p>图书首页</p>
+    <a href="{% url 'shouye:index' %}">返回首页</a>
+{% endblock %}

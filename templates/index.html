@@ -5,10 +5,39 @@
     <title>Title</title>
 </head>
 <body>
-    这里是首页网站<br>
-    这个网站的管理员是{{ admin }}<br>
-    电话:{{ info.phone }}<br>
-    电子邮箱:{{ info.Email }}<br>
-    <a href="{% url 'book:index' %}">图书详情</a>
+<header>
+    <br>
+    {% if username != None %}
+        <h1>{{ username }},欢迎您!</h1>
+    {% else %}
+         <h1>游客,欢迎您!</h1>
+         <a href=" {%  url 'book:index' %}">图书首页</a>
+         <a href=" {%  url 'cms:index' %}">前端首页</a>
+         <a href=" {%  url 'front:index' %}">后台首页</a>
+    {% endif %}
+    <br>
+</header>
+    {% block content %}
+        这里是独特页面
+    {% endblock %}
+<footer>
+    <br>
+    {% if admin == None %}
+        <p>本站点的管理员是：liangzhuang</p>
+        {% else %}
+        <p>本站点的管理员是：{{ admin }}</p>
+    {% endif %}
+    {% if info.phone == None %}
+        <p>电话：198810927950</p>
+        {% else %}
+        <p>电话：{{ info.phone }}</p>
+    {% endif %}
+    {% if info.Email == None %}
+        <p>邮箱：273079347@qq.com</p>
+        {% else %}
+        <p>邮箱：{{ info.Email }}</p>
+    {% endif %}
+    <br>
+</footer>
 </body>
 </html>
