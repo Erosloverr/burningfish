@@ -9,7 +9,7 @@ def index(request):
     context = {
         'admin': 'liangzhuang',
         'info': {'phone':'18810927950',
-                 'Email':'liangzhuang#weilaicheng.com'
+                 'Email':'liangzh@weilaicheng.com'
         }
     }
     return render(request,'index.html',context=context)

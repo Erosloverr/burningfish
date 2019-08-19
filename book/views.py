@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def book(request):
-    return HttpResponse("图书首页")
+    return render(request,'book_index.html')
 
 
 def book_detail(request,book_id):
