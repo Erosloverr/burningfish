@@ -12,10 +12,10 @@
             </tr>
             {% for book in book_data %}
                 <tr>
-                    <th>{{ book.0 }}</th>
-                    <th>{{ book.1 }}</th>
-                    <th>{{ book.2 }}</th>
-                    <th><a href=" {% url 'book:del_book' book_id=book.0  %}">删除</a></th>
+                <th>{{ book.id }}</th>
+                <th>{{ book.name }}</th>
+                <th>{{ book.author }}</th>
+                <th><a href=" {% url 'book:del_book' book_id=book.id %}">删除</a></th>
                 </tr>
             {% endfor %}
         </tbody>
