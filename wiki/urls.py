@@ -23,4 +23,5 @@ urlpatterns = [
     path('book/', include('book.urls')),
     path('cms/', include('cms.urls')),
     path('front/', include('front.urls')),
+    path('spider/',include('spider.urls'))
 ]

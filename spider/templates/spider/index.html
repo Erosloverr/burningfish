@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫页面专享</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td><h3>请勿点击多次！点击之后如果爬虫程序开始运行。</h3></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="点击开始"></td>
+                </tr>
+                <tr>
+                    <td><h3>如有问题，请及时联系！</h3></td>
+                </tr>
+            </tbody>
+        </table>
+</form>
+</body>
+</html>

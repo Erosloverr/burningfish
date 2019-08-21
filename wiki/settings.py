@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cms',
     'front',
     'index_page',
+    'spider',
 ]
 
 MIDDLEWARE = [
