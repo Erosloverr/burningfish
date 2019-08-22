@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.urls import reverse
-import os
+import os,time
 
 
 # Create your views here.
@@ -18,4 +18,5 @@ def index(request):
         else:
             cmd = "nohup python3 /home/burningfish/myProject/SpiderXuMing.py > /home/burningfish/myProject/spider_log/log.txt &"
             os.system(cmd)
+            time.sleep(10)
             return HttpResponse("程序已经开始执行！请耐心等待邮件！")
